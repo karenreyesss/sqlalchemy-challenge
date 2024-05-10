@@ -135,11 +135,11 @@ def get_temps_start(start):
     session.close()
 
     temps = []
-    for min_temp, avg_temp, max_temp in results:
+    for TMIN, TAVG, TMAX in results:
         temps_dict = {}
-        temps_dict['Minimum Temperature'] = min_temp
-        temps_dict['Average Temperature'] = avg_temp
-        temps_dict['Maximum Temperature'] = max_temp
+        temps_dict['Minimum Temperature'] = TMIN
+        temps_dict['Average Temperature'] = TAVG
+        temps_dict['Maximum Temperature'] = TMAX
         temps.append(temps_dict)
 
     return jsonify(temps)
